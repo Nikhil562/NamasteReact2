@@ -43,36 +43,17 @@ const Footer = ()=>{
     )
 }
 
-// const AppLayout = () =>{
-//     return (
-//         /*<Header/>
-//         <Body/>
-//         <Footer/>
-        // Will Throw Error bs JSX must hv only 1 parent el
-        // So we can put inside div but in skeleton div inside div dont look good  , I dont want a div inside my root so React.fragment caan be used 
-        // its a Component of react which can be used like <React.Fragment> code </React.Fragment>  
-        // Its like an empty tag 
-        // but it look ugly so <> </> can be used 
-        
-        // How to give inline css in JSX 
+const AppLayout = () =>{
+    return (
+        <React.Fragment>
+        <HeaderComponent/>
+        <Body/>
+        <Footer/>
+        </React.Fragment>
 
-        
+    );
+};
 
-//     );
-// };
 
-const styleObj={
-        backgroundColor:"red"
-}
-//<div style={{ backgroundColor: 'red' }}>
-// The outer braces tell JSX that you're inserting a JavaScript expression, and the inner braces create an object
-
-const jsx = (
-        <div style={styleObj}> 
-        {/* It acceps a js only thats why even my comment got {} */}
-        <h1>JSX</h1>
-        <h3>Hi Nikhil</h3>
-        </div>
-)
 const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(jsx)
+root.render(<AppLayout/>)
