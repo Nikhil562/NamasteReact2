@@ -1,3 +1,4 @@
+import { backdropClasses, buttonGroupClasses } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import FoodFireLogo from "../Images/Food Fire Logo.png";
@@ -30,5 +31,44 @@ const HeaderComponent=()=>{
                 </div>
         )
 }
+
+const Body =()=>{
+        return (
+            <h4>Body</h4>
+        )
+}
+const Footer = ()=>{
+    return (
+        <h4>Footer</h4>
+    )
+}
+
+// const AppLayout = () =>{
+//     return (
+//         /*<Header/>
+//         <Body/>
+//         <Footer/>
+        // Will Throw Error bs JSX must hv only 1 parent el
+        // So we can put inside div but in skeleton div inside div dont look good  , I dont want a div inside my root so React.fragment caan be used 
+        // its a Component of react which can be used like <React.Fragment> code </React.Fragment>  
+        // Its like an empty tag 
+        // but it look ugly so <> </> can be used 
+        
+        // How to give inline css in JSX 
+
+        
+
+//     );
+// };
+
+const styleObj={
+        backgroundColor:"red"
+}
+const jsx = (
+        <div style={styleObj}> 
+        <h1>JSX</h1>
+        <h3>Hi Nikhil</h3>
+        </div>
+)
 const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(<HeaderComponent/>)
+root.render(jsx)
