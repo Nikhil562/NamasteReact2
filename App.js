@@ -1,4 +1,4 @@
-import { backdropClasses, buttonGroupClasses } from "@mui/material";
+import { backdropClasses, buttonGroupClasses, imageListClasses } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import FoodFireLogo from "../Images/Food Fire Logo.png";
@@ -32,15 +32,22 @@ const HeaderComponent=()=>{
         )
 }
 
+const burgerKing = {
+        name: "Burger King",
+        image:"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/e2270129-d210-4a35-b044-73ae307c5280_248022.JPG",
+        cusines : ["Burger","American"],
+        rating: "4.3"
+}
 const RestrauntCard = () =>{
         return (
                 <div className="card">
-                         <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/e2270129-d210-4a35-b044-73ae307c5280_248022.JPG" alt="Nhi Arha Ja" />
-                        <h2>KFC</h2>
-                        <h13>Burgers American</h13>
-                        <h4>4.2 Stars</h4>
+                        <img src={burgerKing.image} alt="" />
+                        <h2>{burgerKing.name}</h2>
+                        <h13>{burgerKing.cusines.join(',')}</h13>
+                        <h4>{burgerKing.rating} Stars </h4>
                 </div>
         );
+        // can skip return () also 
 };
 
 const Body =()=>{
