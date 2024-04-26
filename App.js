@@ -32,9 +32,22 @@ const HeaderComponent=()=>{
         )
 }
 
+const RestrauntCard = () =>{
+        return (
+                <div className="card">
+                         <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/e2270129-d210-4a35-b044-73ae307c5280_248022.JPG" alt="Nhi Arha Ja" />
+                        <h2>KFC</h2>
+                        <h13>Burgers American</h13>
+                        <h4>4.2 Stars</h4>
+                </div>
+        );
+};
+
 const Body =()=>{
         return (
-            <h4>Body</h4>
+            <div>
+                <RestrauntCard/>
+            </div>
         )
 }
 const Footer = ()=>{
@@ -42,14 +55,30 @@ const Footer = ()=>{
         <h4>Footer</h4>
     )
 }
+/**
+1) Header
+- Logo  (Title)
+- Nav Items(right side)
+- Cart
+2) Body
+- Search bar
+- Restaurants List
+    - Restaurant card
+        - Image
+        - Name
+        - Rating
+3) Footer
+- Links
+- Copyrights
 
+*/
 const AppLayout = () =>{
     return (
-        <React.Fragment>
+        <>
         <HeaderComponent/>
         <Body/>
         <Footer/>
-        </React.Fragment>
+        </>
 
     );
 };
