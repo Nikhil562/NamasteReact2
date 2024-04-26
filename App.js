@@ -64,8 +64,12 @@ const Footer = ()=>{
 const styleObj={
         backgroundColor:"red"
 }
+//<div style={{ backgroundColor: 'red' }}>
+// The outer braces tell JSX that you're inserting a JavaScript expression, and the inner braces create an object
+
 const jsx = (
         <div style={styleObj}> 
+        {/* It acceps a js only thats why even my comment got {} */}
         <h1>JSX</h1>
         <h3>Hi Nikhil</h3>
         </div>
