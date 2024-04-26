@@ -52,7 +52,20 @@ const RestrauntCard = () =>{
 
 const Body =()=>{
         return (
-            <div>
+            <div class="restaurant-list">
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
+                <RestrauntCard/>
                 <RestrauntCard/>
             </div>
         )

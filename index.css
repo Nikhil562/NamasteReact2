@@ -29,3 +29,8 @@
     width: 100%
     /* Now it will take full width of the card  */
 }
+
+.restaurant-list {
+    display: flex;
+    flex-wrap:wrap
+}
