@@ -1863,19 +1863,11 @@ const RestaurantCard =()=>{
 const Body =()=>{
         return (
             <div class="restaurant-list">
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
+              {/* Props:- properties  */}
+              <RestaurantCard restaurant={restaurantList[0]}/>
+              <RestaurantCard restaurant={restaurantList[1]}/>
+              <RestaurantCard restaurant={restaurantList[2]}/>
+              <RestaurantCard restaurant={restaurantList[3]}/>
             </div>
         )
 }
