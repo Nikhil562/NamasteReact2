@@ -1850,13 +1850,13 @@ const restaurantList = [
         },
       ];
       
-const RestaurantCard =()=>{
+const RestaurantCard =(props)=>{
         return (
                 <div className="card">
                         <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + restaurantList[0].data?.cloudinaryImageId} alt="not Appearing" />
-                  <h2>{restaurantList[0].data?.name}</h2>  
-                  <h3>{restaurantList[0].data?.cuisines.join(',')}</h3>  
-                  <h4>{restaurantList[0].data?.lastMileTravelString} Minutes</h4> 
+                  <h2>{props.restaurant.data?.name}</h2>  
+                  <h3>{props.restaurant.data?.cuisines.join(',')}</h3>  
+                  <h4>{props.restaurant.data?.lastMileTravelString} Minutes</h4> 
                 </div>
         )
 }
