@@ -97,3 +97,16 @@ this is what I told
    - Copyrights
 ![alt text](image.png)
 
+
+## config driven UI :- chanhing casousels ass to city ( dynamic UI)
+bs we dont want seperate websites for each city so we control frontend using config so its called config driven UI 
+
+- If we hv casousels
+- list of restraus 
+- Offers
+
+so our data will come like :-
+![alt text](image.png)
+![alt text](image-1.png)
+
+So according to city backend will render accordingly 
