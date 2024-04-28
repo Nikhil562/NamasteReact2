@@ -2,7 +2,7 @@ import { backdropClasses, buttonGroupClasses, imageListClasses } from "@mui/mate
 import React from "react";
 import ReactDOM from "react-dom/client";
 //Default Import
-import {Title,Header} from './components/Header' 
+import Header , {Title} from './components/Header' 
 // Named Import
 // Here {Title} is not obj destructuring 
 
