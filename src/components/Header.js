@@ -16,7 +16,7 @@ export const Title=()=>(
 
 
 );
-const Header = ()=>{
+export const  Header = ()=>{
         return(
                 <div className="header">
                 
@@ -31,5 +31,3 @@ const Header = ()=>{
                 </div>
         )
 }
-
-export default Header

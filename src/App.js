@@ -1,9 +1,8 @@
 import { backdropClasses, buttonGroupClasses, imageListClasses } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from './components/Header'
 //Default Import
-import {Title} from './components/Header' 
+import {Title,Header} from './components/Header' 
 // Named Import
 // Here {Title} is not obj destructuring 
 
@@ -1877,3 +1876,4 @@ const AppLayout = () => {
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
 root.render(<AppLayout/>)
+ 
