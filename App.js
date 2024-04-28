@@ -1869,10 +1869,25 @@ const Body =()=>{
         return (
             <div class="restaurant-list">
               {/* Props:- properties  */}
-              <RestaurantCard name={restaurantList[0].date?.name} cuisines={restaurantList[0].data?.cuisines}/>
+              {/* <RestaurantCard name={restaurantList[0].date?.name} cuisines={restaurantList[0].data?.cuisines}/>
               <RestaurantCard name={restaurantList[1].date?.name} cuisines={restaurantList[1].data?.cuisines}/>
               <RestaurantCard name={restaurantList[2].date?.name} cuisines={restaurantList[2].data?.cuisines}/>
-              <RestaurantCard name={restaurantList[3].date?.name} cuisines={restaurantList[3].data?.cuisines}/>
+              <RestaurantCard name={restaurantList[3].date?.name} cuisines={restaurantList[3].data?.cuisines}/> */}
+              
+              {/* Since estaurantList[0].date has all the props name , cusniesss etc and we hv to pass all these as props so instead of writing each individually we can do :-  */}
+              <RestaurantCard
+              {...restaurantList[0].data}
+              />
+               <RestaurantCard
+              {...restaurantList[1].data}
+              />
+               <RestaurantCard
+              {...restaurantList[2].data}
+              />
+               <RestaurantCard
+              {...restaurantList[3].data}
+              />
+
             </div>
         )
 }
