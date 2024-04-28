@@ -2,7 +2,15 @@ import { backdropClasses, buttonGroupClasses, imageListClasses } from "@mui/mate
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from './components/Header'
+//Default Import
+import {Title} from './components/Header' 
+// Named Import
+// Here {Title} is not obj destructuring 
 
+
+
+// Another way of importing :-
+import * as  Obj from './components/Header'
 const restaurantList = [
         {
           type: "restaurant",
@@ -1858,6 +1866,7 @@ const Footer = ()=>{
 const AppLayout = () => {
   return (
     <React.Fragment>
+      <Title/>
       <Header />
       <Body />
       <Footer />

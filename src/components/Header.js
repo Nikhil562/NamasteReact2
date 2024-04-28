@@ -3,7 +3,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // import FoodFireLogo from "../Images/Food Fire Logo.png";
 
-const Title=()=>(
+export const Title=()=>(
+        // WHenever exporting like this always import in {}
         <a href="/">
         <img
         className="logo"
@@ -19,7 +20,6 @@ const Header = ()=>{
         return(
                 <div className="header">
                 
-                <Title/>
                 <div className="nav-items">
                 <ul>
                         <li>Home</li>
