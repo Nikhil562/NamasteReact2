@@ -109,3 +109,36 @@ this is what I told
 ![alt text](image-1.png)
 
 * So according to city backend will render accordingly 
+
+## Virtual DOM :-
+its not a React concept , its a programming concept 
+- We keep representation of DOM with us 
+![alt text](image-2.png)
+
+- Its needed for a process reconciliation in react to implement Deef algo 
+- Deef  algo that react uses to differenticate one tree from other 
+- And it determines what to change and what not to change and updates changes
+![alt text](image-3.png)
+- In this tree if there is a change in 7th node it wont rerender entire tree
+![alt text](image-4.png)
+- Only this much will be rerendered 
+
+![alt text](image-5.png)
+- If we add 1 more div here react wont know the order to insert , So whenever we have multiple children with the same attribute , this problem arises 
+
+![alt text](image-6.png)
+
+- Here it thinks we have 5 divs so rerender etg, since it dont know which child got change , since no reference of diffrence if there
+- So use key 
+![alt text](image-7.png)
+
+- Now react will only rerender div 5
+
+- React fibre is a reconciliation engine ,came in Reacr 16 ,responsible for diff 
+
+- since we have so many nodes in :-
+`restaurantList.map((restaurant) =>{
+                  return <RestaurantCard {...restaurant.data} />
+` so use key
+- If we use duplicate key react will give error
+
