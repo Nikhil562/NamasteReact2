@@ -142,3 +142,7 @@ its not a React concept , its a programming concept
 ` so use key
 - If we use duplicate key react will give error
 
+## Lets Get Hooked :-
+- In default import your can name other that what name is exported  but its good practice to keep same 
+- Some people write Header.js as Header.jsx its bs it contains jsx , its also correct 
+ 

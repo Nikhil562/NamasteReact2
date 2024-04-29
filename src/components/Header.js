@@ -1,9 +1,8 @@
-import { backdropClasses, buttonGroupClasses, imageListClasses } from "@mui/material";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import FoodFireLogo from "../Images/Food Fire Logo.png";
 
-export const Title=()=>(
+const Title=()=>(
         // WHenever exporting like this always import in {}
         <a href="/">
         <img
@@ -16,10 +15,10 @@ export const Title=()=>(
 
 
 );
- const Header = ()=>{
+const Header = ()=>{
         return(
                 <div className="header">
-                
+                <Title/>
                 <div className="nav-items">
                 <ul>
                         <li>Home</li>
