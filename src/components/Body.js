@@ -1,9 +1,18 @@
 import { restaurantList } from "../constants"
 import RestaurantCard from "./RestaurantCard"
 import { useState } from "react";
-const Body =()=>{
 
-  const [searchText,setSearchText]= useState("false");
+
+function filterData(searchText,restaurants){
+  // If searched text :- BurgerKing if will give all related restaurants 
+  const filterData = restaurants.filter((restaurant)=>
+    restaurant.data.name.includes(searchText)
+  )
+  return filterData
+}
+const Body =()=>{
+  const [restaurants,setRestuarants] = useState(restaurantList); 
+  const [searchText,setSearchText]= useState("");
 
   return (
     <>
@@ -17,18 +26,20 @@ const Body =()=>{
           }
         }
         />
-        <h1>{searchText}</h1>
         <button 
         className="search-btn"
         onClick={()=>{
-          if(searchText==="true") setSearchText("false");
-          else setSearchText("true")
+        //Need to filter the data 
+        // update the state - results 
+
+        const data = filterData(searchText, restaurants)
+        setRestuarants(data);
         }}
         >Search</button>
         </div>        
     <div className="restaurant-list">
           {
-            restaurantList.map((restaurant) =>{
+            restaurants.map((restaurant) =>{
               return <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
 
           })}
