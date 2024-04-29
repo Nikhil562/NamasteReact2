@@ -1,7 +1,14 @@
 import { restaurantList } from "../constants"
 import RestaurantCard from "./RestaurantCard"
 const Body =()=>{
-    return   (          
+    return   (    
+    <>
+      <div className="search-container">
+        <input type="text"
+         className="search-input"
+         value=""/>
+         <button className="search-btn">Search</button>
+      </div>      
     <div className="restaurant-list">
           {
             restaurantList.map((restaurant) =>{
@@ -11,7 +18,8 @@ const Body =()=>{
 
 
         </div>
-      )
+      </>
+    )
     
 }
 export default Body
