@@ -3,14 +3,14 @@ import RestaurantCard from "./RestaurantCard"
 import { useState ,useEffect} from "react";
 import Shimmer from './Shimmer'
 function filterData(searchText,restaurants){
-  // If searched text :- BurgerKing if will give all related restaurants 
   const filterData = restaurants?.filter((restaurant)=>
-    restaurant.data.name.includes(searchText)
+    restaurant.data?.name.toLowerCase()?.includes(searchText.toLowerCase())
   )
   return filterData
 }
 const Body =()=>{
-  const [restaurants,setRestaurants] = useState(restaurantList); 
+  const [allrestaurants,setAllRestaurants]=useState([])
+  const [filteredRestaurants,setFilteredRestaurants] = useState([]); 
   const [searchText,setSearchText]= useState("");
   useEffect(
     ()=>{
@@ -21,17 +21,16 @@ const Body =()=>{
     const data= await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
     const json = await data.json();
     console.log(json);
-  setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+  setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);//first time I want to show all restaurants
+  setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);//then filtered restaurants
+
   }
 
+  if(!allrestaurants) return null
+  if(filteredRestaurants.length===0) return <h1>No Restaurant match your filter</h1> 
 
-  //conditional rendering 
-  /*
-  if restruant is empty is shoudl load shimmer UI
-  if restaurant has data it should load actual data UI
-  **/
   return (
-    restaurants?.length === 0 ? (
+    allrestaurants?.length === 0 ? (  //Shimmer is only shown when I have no data If I have my all restaurants.length==0 then shimmer is shown else filterd is shown 
       <Shimmer />
     ) : (
       <>
@@ -49,13 +48,13 @@ const Body =()=>{
         className="search-btn"
         onClick={()=>{
 
-        const data = filterData(searchText, restaurants)
-        setRestaurants(data);
+        const data = filterData(searchText, allrestaurants)
+        setFilteredRestaurants(data);
         }}
         >Search</button>
         </div>        
         <div className="restaurant-list">
-        {restaurants?.map((restaurant) => (
+        {filteredRestaurants?.map((restaurant) => (
           <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
         ))}
       </div>

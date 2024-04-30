@@ -148,3 +148,7 @@ its not a React concept , its a programming concept
  
 ## Exploring the world
 ![alt text](image-8.png)
+
+-- Shimmer UI was not working bs of 
+    const [filteredRestaurants,setFilteredRestaurants] = useState(); 
+    make it   const [filteredRestaurants,setFilteredRestaurants] = useState([]); 
