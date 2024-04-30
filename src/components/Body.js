@@ -27,7 +27,7 @@ const Body =()=>{
   }
 
   if(!allrestaurants) return null
-  if(filteredRestaurants.length===0) return <h1>No Restaurant match your filter</h1> 
+  // if(filteredRestaurants.length===0) return <h1>No Restaurant match your filter</h1> 
 
   return (
     allrestaurants?.length === 0 ? (  //Shimmer is only shown when I have no data If I have my all restaurants.length==0 then shimmer is shown else filterd is shown 
