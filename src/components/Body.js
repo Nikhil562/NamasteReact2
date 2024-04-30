@@ -13,48 +13,20 @@ const Body =()=>{
   const [restaurants,setRestuarants] = useState(restaurantList); 
   const [searchText,setSearchText]= useState("");
 
-  //fetch() //this place is not a good place to all api bs on every key press it will do UI rerender 
-  //we want :- As page loads call an API fill the data 
-
-  // 2 cases can be possible :-
-
-  // 1)user loads ->API call (300 milli sec) -> render page (200ms) => total 500ms  (page will be available after 500ms)
-  // 2)user loads ->render the initial page ->API call->update the UI (page will be available after 100ms (lets say after loading rendering takes 100ms))
-  // so we will use useEffect
-
+//API calls in useeffect  once after u render 
+// loads -> render -> API call(useeffect) ->rerender 
   useEffect(
     ()=>{
+getRestaurants();  ///but browser will restrict , it says when u r trying to talk to swiggy.com from localhost we can not let u do this like this so install a plugin CORS
 
-    }
+    },[]
   )
-  // whenever useeffect want to call the callback fun inside it useeffect will call
- //component rerenders 2 times :- 
- /*
- 1) state changes
- 2) props changes
+  async function getRestaurants(){
+    const data= await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
+    const json = await data.json();
+    console.log(json);
+  }
 
-
- After every rerender this useeffect will be called but we dont want to call it after every rerender 
- so
- we provide a deprendency array 
-
-  useEffect(
-    ()=>{
-
-    },[]   -> if its not dependent on etg it will be called just once (After initial render)
-  )
-
-  lets say I only want to call it only when searchText changes  so write it in depen arr 
-
-  useEffect(
-    ()=>{
-
-    },[searchText] 
-  )
-
-  so API call will be there inside useEffect it will rerender the component
-
-  */
   return (
     <>
       <div className="search-container">
