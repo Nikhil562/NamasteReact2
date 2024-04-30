@@ -10,7 +10,7 @@ function filterData(searchText,restaurants){
   return filterData
 }
 const Body =()=>{
-  const [restaurants,setRestuarants] = useState(restaurantList); 
+  const [restaurants,setRestuarants] = useState(restaurantList); //Now I dont need this restrauntlist now , now we will push new data from json into  restraunts 
   const [searchText,setSearchText]= useState("");
 
 //API calls in useeffect  once after u render 
@@ -25,6 +25,8 @@ getRestaurants();  ///but browser will restrict , it says when u r trying to tal
     const data= await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
     const json = await data.json();
     console.log(json);
+  // const [restaurants,setRestuarants] = useState(restaurantList); //Now I dont need this restrauntlist now , now we will push new data from json into  restraunts 
+  setRestuarants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
   return (
