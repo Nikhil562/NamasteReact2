@@ -146,3 +146,5 @@ its not a React concept , its a programming concept
 - In default import your can name other that what name is exported  but its good practice to keep same 
 - Some people write Header.js as Header.jsx its bs it contains jsx , its also correct 
  
+## Exploring the world
+![alt text](image-8.png)
