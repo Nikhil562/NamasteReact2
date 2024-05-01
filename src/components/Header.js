@@ -29,7 +29,9 @@ const Header = ()=>{
                         <li>About</li>    It will reload the page 
                         </a> */}
                         <Link to="/about">
-                        <li>About</li>  /{/* Now its now reloading*/}
+                        <li>About</li>  /{/* Now its now reloading
+                                         But Our header and footer not appearing */ 
+                                        }
                         </Link>
                         <li>Contact</li>
                         <li>Cart</li>

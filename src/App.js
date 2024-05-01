@@ -7,6 +7,7 @@ import { createBrowserRouter ,RouterProvider} from "react-router-dom";
       //its a fun helps to create routing 
 import About from './components/About'
 import Error from './components/Error'
+import Contact from "./components/Contact";
 
       //There are diff types of routes with there own advantage  createBrowserRouter is recomended for react projects 
 const AppLayout = () => {
@@ -14,7 +15,9 @@ const AppLayout = () => {
   return (
     <React.Fragment>
       <Header />
-      <Body />
+      <About/>  {/*If Path is  /about*/}
+      <Body />    {/*If Path is  / */}   
+      <Contact/>     {/*If Path is  /contact */} 
       <Footer />
     </React.Fragment>
   );
@@ -23,15 +26,23 @@ const appRouter = createBrowserRouter([
   {
     path:"/",
     element:<AppLayout/>,
-    errorElement:<Error/>
-  },{
-    path:"/about",
-    element:<About/>
+    errorElement:<Error/>,
+    children: [
+      {
+        path:"/about",
+        element:<About/>
+      },{
+        path:"/contact",
+        element:<Contact/>
+      }
+    ]
   }
 ]
 )
+// I have to make About children of AppLayout bs it should come inside Applayout  
 
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={appRouter}/>)
  
+
