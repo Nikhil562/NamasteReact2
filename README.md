@@ -163,3 +163,6 @@ its not a React concept , its a programming concept
 - There are two types of routing :-
   -  Server site Routing :- All pages come from server 
   - Client Site Routing :- ex React no network call no need to go to server to fwtch details 
+  ![alt text](image-10.png)
+  ![alt text](image-11.png)
+-Outlet solved the issue 
