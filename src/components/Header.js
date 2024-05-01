@@ -24,16 +24,15 @@ const Header = ()=>{
                 <Title/>
                 <div className="nav-items">
                 <ul>
-                        <li>Home</li>
-                        {/* <a href="/about">
-                        <li>About</li>    It will reload the page 
-                        </a> */}
-                        <Link to="/about">
-                        <li>About</li>  /{/* Now its now reloading
-                                         But Our header and footer not appearing */ 
-                                        }
+                        <Link to="/">
+                        <li>Home</li> 
                         </Link>
-                        <li>Contact</li>
+                        <Link to="/about">
+                        <li>About</li> 
+                        </Link>
+                        <Link to="/contact">
+                        <li>Contact</li> 
+                        </Link>
                         <li>Cart</li>
                 </ul>
                 </div>
