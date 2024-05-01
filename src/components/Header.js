@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Logo from '../assets/img/FoodVillaImg.webp'
+import { Link } from "react-router-dom";
 
 const Title=()=>(
         // WHenever exporting like this always import in {}
@@ -24,7 +25,12 @@ const Header = ()=>{
                 <div className="nav-items">
                 <ul>
                         <li>Home</li>
-                        <li>About</li>
+                        {/* <a href="/about">
+                        <li>About</li>    It will reload the page 
+                        </a> */}
+                        <Link to="/about">
+                        <li>About</li>  /{/* Now its now reloading*/}
+                        </Link>
                         <li>Contact</li>
                         <li>Cart</li>
                 </ul>

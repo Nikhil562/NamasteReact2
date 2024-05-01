@@ -3,20 +3,14 @@ import ReactDOM from "react-dom/client";
 import Header  from './components/Header' 
 import Body from './components/Body'
 import Footer from './components/Footer'
-      
+import { createBrowserRouter ,RouterProvider} from "react-router-dom";
+      //its a fun helps to create routing 
+import About from './components/About'
+import Error from './components/Error'
+
+      //There are diff types of routes with there own advantage  createBrowserRouter is recomended for react projects 
 const AppLayout = () => {
-  /*  
-   # Never Ever :- 
 
-   const Food=()=>{
-  create a component inside component
-
-  Write a useState inside if else  it leads to inconsistency 
-  also not inside for loop 
-
-  Usestate is a hook which react gives us to create local variables inside functional components 
-  so never use it outside functional component 
-  */
   return (
     <React.Fragment>
       <Header />
@@ -25,8 +19,19 @@ const AppLayout = () => {
     </React.Fragment>
   );
 };
+const appRouter = createBrowserRouter([
+  {
+    path:"/",
+    element:<AppLayout/>,
+    errorElement:<Error/>
+  },{
+    path:"/about",
+    element:<About/>
+  }
+]
+)
 
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppLayout/>)
+root.render(<RouterProvider router={appRouter}/>)
  

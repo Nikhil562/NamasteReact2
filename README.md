@@ -152,3 +152,14 @@ its not a React concept , its a programming concept
 -- Shimmer UI was not working bs of 
     const [filteredRestaurants,setFilteredRestaurants] = useState(); 
     make it   const [filteredRestaurants,setFilteredRestaurants] = useState([]); 
+
+## Finding the Path :-
+- Instead of building hole package on your own u can use a  package  formik
+
+- Install React Router Dom 
+![alt text](image-9.png)
+- React-router-dom is such a powerfull library it gives results for unexpected results as well 
+
+- There are two types of routing :-
+  -  Server site Routing :- All pages come from server 
+  - Client Site Routing :- ex React no network call no need to go to server to fwtch details 
