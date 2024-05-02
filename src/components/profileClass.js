@@ -6,9 +6,15 @@ class Profile extends React.Component{
         this.state={
             count:0,
             count2:0
-        }//hole state is a 1 big obj react uses 1 big obj to maintain the hole state 
+        }
+        console.log('child constructor')   //3rd
+    }
+    componentDidMount(){
+        console.log('child-componentDIdMount')  //5th
     }
     render(){
+        const {count}=this.state;
+        console.log('child render')   //4th
     return (
         <div>
         <h1>Name:-{this.props.name}</h1>
