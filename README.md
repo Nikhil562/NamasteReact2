@@ -165,4 +165,12 @@ its not a React concept , its a programming concept
   - Client Site Routing :- ex React no network call no need to go to server to fwtch details 
   ![alt text](image-10.png)
   ![alt text](image-11.png)
--Outlet solved the issue 
+- Outlet solved the issue 
+
+- IN Functional component :- 
+  - render -> useEffect -> rerender 
+-IN class component :-
+ - we hv constructor , render() , componentDidMount() all these are life cycle methods 
+ - contructor -> render ->componentDidMount
+ - so the best place for API call :- componentDidMount
+  
