@@ -6,7 +6,7 @@ const RestaurantMenu =()=>{
     //to read a dynamic URL params 
     const params =useParams();
 
-    const [restaurant,setRestaurant] =useState({null});
+    const [restaurant,setRestaurant] =useState({});
 
 
     useEffect( ()=>{

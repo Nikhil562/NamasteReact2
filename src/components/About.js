@@ -1,8 +1,10 @@
-import React from 'react'
-
+import {Outlet} from "react-router-dom"
 const About=()=> {
   return (
-    <div>About</div>
+    <div>About
+    <Outlet/>
+    {/* Or we could do <Profile/> */}
+    </div>
   )
 }
 
