@@ -1,11 +1,18 @@
 import React from "react";
 
 class Profile extends React.Component{
-    // u can not create a class based component without render method which returns some JSX 
+    constructor(props){
+        super(props);
+        this.state={
+            count:0
+        }
+    }
     render(){
     return (
         <div>
-        <h1>{this.props.name}</h1>
+        <h1>Name:-{this.props.name}</h1>
+        <h2>XYZ:- {this.props.xyz}</h2>
+        <h3>count:-{this.state.count}</h3>
         </div>
     )
 }

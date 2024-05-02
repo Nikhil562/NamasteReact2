@@ -9,7 +9,7 @@ const About=()=> {
         This is the Namaste react course
       </p>
       <ProfileFunctionalComponent name={"Nikhil"}/>
-      <Profile name={"Akshay"}/>
+      <Profile name={"Akshay"} xyz= {"Sry"}/>
     </div>
   )
 }
