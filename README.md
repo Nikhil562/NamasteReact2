@@ -173,4 +173,6 @@ its not a React concept , its a programming concept
  - we hv constructor , render() , componentDidMount() all these are life cycle methods 
  - contructor -> render ->componentDidMount
  - so the best place for API call :- componentDidMount
+
+  ![alt text](image-12.png)
   

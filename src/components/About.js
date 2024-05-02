@@ -34,10 +34,37 @@ class About extends Component{
         <p>
           This is the Namaste react course
         </p>
-        <Profile name={"Akshay"} xyz= {"Sry"}/>
+        <Profile name={"First Child"} xyz= {"Sry"}/>
+        <Profile name={"Second CHild"} xyz= {"Sry"}/>
+
       </div>
     )
   }
 }
 
 export default About
+
+/*
+
+Parent Constructor
+Parent render
+    -First Child - Constructor
+    -First Child - render
+    -second Child -constrctor
+    -second child -render
+    -FIrst Child -componentDIdMount
+    -second child- componentDidMount
+parent-componentDidMount
+
+
+When react renders it renders in 2 phases :- 
+ render phase and commit phase 
+ first render phase is finished 
+
+ render phase :-  constructor and render method is called in this phase
+ after then react actually updates the DOM then 
+  
+ commit phase :- place where react is modifying the dom 
+
+ componentDidMount is done after we updated the DOM (initial render)
+*/

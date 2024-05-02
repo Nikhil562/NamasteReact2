@@ -7,14 +7,14 @@ class Profile extends React.Component{
             count:0,
             count2:0
         }
-        console.log('child constructor')   //3rd
+        console.log('child constructor'+this.props.name)   //3rd
     }
     componentDidMount(){
-        console.log('child-componentDIdMount')  //5th
+        console.log('child-componentDIdMount'+this.props.name)  //5th
     }
     render(){
         const {count}=this.state;
-        console.log('child render')   //4th
+        console.log('child render'+this.props.name)   //4th
     return (
         <div>
         <h1>Name:-{this.props.name}</h1>
