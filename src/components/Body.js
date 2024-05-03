@@ -4,6 +4,7 @@ import { useState ,useEffect} from "react";
 import Shimmer from './Shimmer'
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import { backdropClasses } from "@mui/material";
 const Body =()=>{
   const [allrestaurants,setAllRestaurants]=useState([])
   const [filteredRestaurants,setFilteredRestaurants] = useState([]); 
@@ -29,10 +30,10 @@ if(!isOnline){
   if(!allrestaurants) return null
   // if(filteredRestaurants.length===0) return <h1>No Restaurant match your filter</h1> 
 
+  const searchBtnCSS={
+    backgroundColor:'red'
+  } //Inline CSS 
   return (
-    allrestaurants?.length === 0 ? (  //Shimmer is only shown when I have no data If I have my all restaurants.length==0 then shimmer is shown else filterd is shown 
-      <Shimmer />
-    ) : (
       <>
       <div className="search-container">
         <input type="text"
@@ -45,7 +46,8 @@ if(!isOnline){
         }
         />
         <button 
-        className="search-btn"
+        style={searchBtnCSS}
+        // className="search-btn"   //External CSS 
         onClick={()=>{
 
         const data = filterData(searchText, allrestaurants)
@@ -60,7 +62,19 @@ if(!isOnline){
       </div>
     </>
     )
-  )
+  
     
 }
 export default Body
+
+
+//Diff types of CSS methods:-
+
+/**
+ Normal Native CSS
+ SCSS
+ InLine CSS
+ Component Libraries - MUI , Base UI , Chakra UI , Ant
+ Tailwind CSS Framework
+ Styled Components
+ */
