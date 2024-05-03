@@ -67,4 +67,21 @@ When react renders it renders in 2 phases :-
  commit phase :- place where react is modifying the dom 
 
  componentDidMount is done after we updated the DOM (initial render)
+
+ when there are 2 children react tries to batch up the render phase 
+   Parent constructor 
+   Parent render 
+        FIrst CHild constrcutor
+        FIrst Child render
+
+        Now we have finised 1st phase react says we have more children let me finish the render phase for everyone I will commit it again 
+        Bs If one of the children started API call in commit phase  then it will delay the render phase for the second time 
+
+        Second Child construcotr
+        Second Child render
+
+    First Child componentDIdMount
+    Second Child componentDidMount
+    Parent componentDidMount
+    
 */
