@@ -78,3 +78,9 @@ When a components destroys it called componentWillUnmount
 When I go to someothe page ex:- contact page will will be printed 
 
 */
+
+
+/*
+Why Hooks :-
+Modularity , Reusability , Readability 
+*/
