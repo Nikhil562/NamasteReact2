@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import {FETCH_MENU_URL} from '../constants'
 
 const useRestaurant =(resId)=>{
-const [restaurant,setRestaurant]= useState(null);
 
+const [restaurant,setRestaurant]= useState(null);
 
 useEffect( ()=>{
     getRestaurantInfo();
@@ -16,6 +16,8 @@ async function getRestaurantInfo(){
 
 return restaurant;
 }
+
+
 export default useRestaurant;
 
 

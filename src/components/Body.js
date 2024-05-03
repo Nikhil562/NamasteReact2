@@ -20,6 +20,10 @@ const Body =()=>{
   setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);//then filtered restaurants
 
   }
+const offline =true;
+if(offline){
+    return <h1>🔴Offline , Please check your internet connection</h1>
+}
 
   if(!allrestaurants) return null
   // if(filteredRestaurants.length===0) return <h1>No Restaurant match your filter</h1> 
