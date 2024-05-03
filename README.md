@@ -176,3 +176,12 @@ its not a React concept , its a programming concept
 
   ![alt text](image-12.png)
   
+
+  #190
+  ![alt text](image-13.png)
+
+  - cdidUpdate
+  ![alt text](image-14.png)
+
+  - Unmount 
+  ![alt text](image-15.png)
