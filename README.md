@@ -185,3 +185,8 @@ its not a React concept , its a programming concept
 
   - Unmount 
   ![alt text](image-15.png)
+
+  - For Other Pages 1 file but for instamart 2 files
+  ![alt text](image-16.png)
+  - When we load Instamart bund it takes some time to load the script meanwhile react tries to render it ,stg which is not there so in this process react suspends the rendering   
+  - It came after 734ms  before that react suspends to handle this suspence is used 

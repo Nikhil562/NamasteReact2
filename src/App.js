@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react'
+import { lazy } from 'react';
+import { Suspense } from 'react';
 import ReactDOM from "react-dom/client";
 import Header  from './components/Header' 
 import Body from './components/Body'
@@ -9,6 +11,13 @@ import Error from './components/Error'
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from './components/Profile'
+import Shimmer from './components/Shimmer.js';
+// import Instamart from './components/Instamart' Not like this 
+
+const Instamart = lazy(()=>{
+  import('./components/Instamart.js')
+});
+
 const AppLayout = () => {
 
   return (
@@ -51,6 +60,16 @@ const appRouter = createBrowserRouter([
       },{
         path:'/restaurant/:id',  //Dynamic routing 
         element:<RestaurantMenu/>
+      },
+      {
+        path:'/instamart',  //Dynamic routing 
+        element:(
+          <Suspense fallback={<Shimmer/>}>
+             <Instamart/>
+          </Suspense>
+          // Now react waits for it 
+          // When there is a suspence then what will be loaded so it takes a prop : fallback u can check it using slow 3g 
+        )
       }
     ]
   }
